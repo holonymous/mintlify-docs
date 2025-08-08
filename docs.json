@@ -9,28 +9,23 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Assembly",
-        "groups": [
-          {
-            "group": "Getting started",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "help",
-              "update"
-            ]
-          },
-          {
-            "group": "API",
-            "icon": "code",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
+        "group": "Getting started",
+        "icon": "rocket",
+        "pages": [
+          "index",
+          "help",
+          "update"
+        ]
+      },
+      {
+        "group": "API",
+        "icon": "code",
+        "pages": [
+          "ai-tools/cursor",
+          "ai-tools/claude-code",
+          "ai-tools/windsurf"
         ]
       }
     ],
@@ -46,11 +41,11 @@
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity"
+    ]
   }
 }
