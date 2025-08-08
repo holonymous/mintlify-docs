@@ -98,8 +98,74 @@ lc:colorpicker("colorpicker", 1, 0, 0, 1)
 lk:keybind("keybind")
 ```
 
-### example
+### example [ set_visible ]
 
 ```lua
+local checkbox = ui.new_checkbox("Enable Elements")
+local button = ui.button("Click Me")
+local combo = ui.new_combo("Select Option", {"Option 1", "Option 2"})
+local slider = ui.slider_float("Opacity", 0.5, 0.0, 1.0, "%.2f")
+local slider_int = ui.slider_int("Count", 5, 1, 10, "%d")
+local colorpicker = ui.colorpicker("Team Color", 1.0, 0.5, 0.2, 1.0)
 
+local elements = {
+    button, combo, slider, slider_int, multiselect, colorpicker
+}
+
+cheat.set_callback("paint", function()
+    table.foreach(elements, function(_, v)
+        v:set_visible(checkbox:get())
+    end)
+end)
+```
+
+### example [ callback ]
+
+```lua
+local checkbox = ui.new_checkbox("Enabled")
+local button = ui.button("Click Me")
+local combo = ui.new_combo("Select Option", {"Option 1", "Option 2", "Option 3"})
+local slider = ui.slider_float("Opacity", 0.5, 0.0, 1.0, "%.2f")
+local slider_int = ui.slider_int("Count", 5, 1, 10, "%d")
+local multiselect = ui.multi_select("Select Items", {"Item 1", "Item 2", "Item 3"})
+local colorpicker = ui.colorpicker("Team Color", 1.0, 0.5, 0.2, 1.0)
+local textinput = ui.textinput("Custom Text", "Default value")
+local keybind = ui.keybind("Aimbot Key")
+local label = ui.label("This is a label")
+
+cheat.set_callback("paint", function()
+    --> checkbox
+    if checkbox:get() then
+        print('active')
+    end
+
+    --> button
+    if button:get() then
+        print('clicked')
+    end
+    
+    --> slider_int / slider.float
+    local slidered = slider:get()
+    print("slider value:", slidered)
+
+    --> combo / multiselect
+    local selected = multiselect:get()
+    for _, index in ipairs(selected) do
+        print("leo corre pa rezotti zakite", index) -- returns a number, 0-based
+    end
+
+    --> colorpicker
+    local colored = colorpicker:get()
+    print("recolored:", colored.r, colored.g, colored.b, colored.a) 
+    -- or print("Selected color:", colored)
+
+    --> textinput
+    local texted = textinput:get()
+    print("changed text:", texted)
+
+    --> keybind
+    if keybind:get() then
+        print("keybind active")
+    end
+end)
 ```
