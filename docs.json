@@ -3,9 +3,9 @@
   "theme": "willow",
   "name": "nonreaden",
   "colors": {
-    "primary": "#3e5b81",
-    "light": "#3e5b81",
-    "dark": "#3e5b82"
+    "primary": "#406ba3",
+    "light": "#406ba3",
+    "dark": "#406ba3"
   },
   "favicon": "/pengu.ico",
   "navigation": {
@@ -49,7 +49,6 @@
   },
   "contextual": {
     "options": [
-      "view",
       "chatgpt",
       "claude",
       "perplexity"
