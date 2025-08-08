@@ -59,12 +59,12 @@
         {
           "anchor": "Assembly",
           "href": "https://assembly.lol/",
-          "icon": "book-open-cover"
+          "icon": "link"
         },
         {
           "anchor": "Discord",
           "href": "https://discord.gg/qDgNXwWx9u",
-          "icon": "newspaper"
+          "icon": "message-circle"
         }
       ]
     }
