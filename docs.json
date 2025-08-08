@@ -4,7 +4,7 @@
   "name": "nonreaden",
   "colors": {
     "primary": "#3e5b81",
-    "light": "#07C983",
+    "light": "#3e5b81",
     "dark": "#3e5b82"
   },
   "favicon": "/pengu.ico",
