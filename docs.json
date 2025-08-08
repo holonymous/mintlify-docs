@@ -23,7 +23,7 @@
             ]
           },
           {
-            "menu": "API",
+            "groupp": "API",
             "icon": "code",
             "pages": [
               "ai-tools/cursor",
