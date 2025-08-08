@@ -8,42 +8,32 @@
     "dark": "#3e5b82"
   },
   "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Assembly",
-        "groups": [
-          {
-            "group": "Getting started",
-            "icon": "rocket",
-            "pages": [
-              "index",
-              "help",
-              "update"
-            ]
-          },
-          {
-            "groupp": "API",
-            "icon": "code",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Assembly",
-          "href": "https://assembly.lol/",
-          "icon": "link"
-        }
+"navigation": {
+  "anchors": [
+    {
+      "anchor": "Documentation",
+      "icon": "book-open",
+      "pages": [
+        "quickstart",
+        "development",
+        "navigation"
       ]
+    },
+    {
+      "anchor": "API References",
+      "icon": "square-terminal",
+      "pages": [
+        "api-reference/get",
+        "api-reference/post",
+        "api-reference/delete"
+      ]
+    },
+    {
+      "anchor": "Blog",
+      "href": "https://external-link.com/blog"
     }
-  },
+  ]
+},
   "contextual": {
     "options": [
      "copy",
