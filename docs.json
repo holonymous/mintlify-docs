@@ -23,17 +23,17 @@
         "group": "API",
         "icon": "code",
         "pages": [
-          "api/Globals",
-          "api/Menu",
-          "api/Camera",
-          "api/Game",
-          "api/Cache",
-          "api/Json",
-          "api/Math",
-          "api/Http",
-          "api/Render",
-          "api/Events",
-          "api/Input"
+          "api/globals",
+          "api/menu",
+          "api/camera",
+          "api/game",
+          "api/cache",
+          "api/json",
+          "api/math",
+          "api/http",
+          "api/render",
+          "api/events",
+          "api/input"
 
         ]
       }
