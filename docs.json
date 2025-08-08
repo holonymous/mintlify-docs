@@ -15,6 +15,7 @@
         "groups": [
           {
             "group": "Getting started",
+            "icon": "rocket",
             "pages": [
               "index",
               "help",
@@ -23,6 +24,7 @@
           },
           {
             "group": "API",
+            "icon": "code",
             "pages": [
               "ai-tools/cursor",
               "ai-tools/claude-code",
