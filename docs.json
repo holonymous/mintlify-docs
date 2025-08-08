@@ -14,7 +14,7 @@
         "tab": "Assembly",
         "groups": [
           {
-            "group": "Getting started",
+            "menu": "Getting started",
             "icon": "rocket",
             "pages": [
               "index",
@@ -23,7 +23,7 @@
             ]
           },
           {
-            "group": "API",
+            "menu": "API",
             "icon": "code",
             "pages": [
               "ai-tools/cursor",
