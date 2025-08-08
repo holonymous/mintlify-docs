@@ -23,9 +23,18 @@
         "group": "API",
         "icon": "code",
         "pages": [
-          "ai-tools/cursor",
-          "ai-tools/claude-code",
-          "ai-tools/windsurf"
+          "api/Globals",
+          "api/Menu",
+          "api/Camera",
+          "api/Game",
+          "api/Cache",
+          "api/Json",
+          "api/Math",
+          "api/Http",
+          "api/Render",
+          "api/Events",
+          "api/Input"
+
         ]
       }
     ],
@@ -41,7 +50,6 @@
   },
   "contextual": {
     "options": [
-      "copy",
       "view",
       "chatgpt",
       "claude",
