@@ -14,7 +14,7 @@
         "tab": "Assembly",
         "groups": [
           {
-            "menu": "Getting started",
+            "group": "Getting started",
             "icon": "rocket",
             "pages": [
               "index",
