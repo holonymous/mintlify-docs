@@ -95,7 +95,7 @@ example of how the menu works and its features
 
 ### 2 elements in a row
 
-The elements are created from keybind and colorpicker, which is why it is currently not possible to create three elements in a row.
+The elements are created from keybind and colorpicker, which is why it is currently not possible to create three elements in a row. Works exclusively between these four elements
 
 ```lua
 local cc = ui.new_checkbox("checkbox colorpicker")
@@ -113,28 +113,7 @@ lc:colorpicker("colorpicker", 1, 0, 0, 1)
 lk:keybind("keybind")
 ```
 
-### example [ set_visible ]
-
-```lua
-local checkbox = ui.new_checkbox("Enable Elements")
-local button = ui.button("Click Me")
-local combo = ui.new_combo("Select Option", {"Option 1", "Option 2"})
-local slider = ui.slider_float("Opacity", 0.5, 0.0, 1.0, "%.2f")
-local slider_int = ui.slider_int("Count", 5, 1, 10, "%d")
-local colorpicker = ui.colorpicker("Team Color", 1.0, 0.5, 0.2, 1.0)
-
-local elements = {
-    button, combo, slider, slider_int, multiselect, colorpicker
-}
-
-cheat.set_callback("paint", function()
-    table.foreach(elements, function(_, v)
-        v:set_visible(checkbox:get())
-    end)
-end)
-```
-
-### example [ callback ]
+### full example
 
 ```lua
 local checkbox = ui.new_checkbox("Enabled")
@@ -148,7 +127,19 @@ local textinput = ui.textinput("Custom Text", "Default value")
 local keybind = ui.keybind("Aimbot Key")
 local label = ui.label("This is a label")
 
+local elements = {
+    button, combo, slider, slider_int, multiselect, colorpicker, textinput, keybind, label
+}
+
 cheat.set_callback("paint", function()
+    table.foreach(elements, function(_, v)
+        v:set_visible(checkbox:get())
+    end)
+end)
+
+cheat.set_callback("paint", function()
+	if not checkbox:get() then return end
+
     --> checkbox
     if checkbox:get() then
         print('active')
