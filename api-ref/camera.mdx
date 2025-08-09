@@ -5,64 +5,64 @@ icon: "camera"
 
 ## GetFov
 
+This function returns the field of view (FOV) value, which is already converted from radians to degrees
+
 ```lua
 camera.GetFov()
 ```
 
-This function returns the field of view (FOV) value, which is already converted from radians to degrees
-
 ## SetFov
+
+The `SetFov` function adjusts the camera's field of view to the specified value. This value is input in degrees, and the function automatically converts it to radians for internal processing
 
 ```lua
 camera.SetFov(value)
 ```
 
-The `SetFov` function adjusts the camera's field of view to the specified value. This value is input in degrees, and the function automatically converts it to radians for internal processing
-
 ## GetPosition
+
+The `GetPosition` function retrieves the current position of the camera, returning it as a `Vector3`. This allows for precise manipulation and assessment of the camera's location in 3D space
 
 ```lua
 camera.GetPosition()
 ```
 
-The `GetPosition` function retrieves the current position of the camera, returning it as a `Vector3`. This allows for precise manipulation and assessment of the camera's location in 3D space
-
 ## SetPosition
+
+The `SetPosition` function assigns a new position to the camera based on the specified `Vector3` value
 
 ```lua
 camera.SetPosition(Vector3: x, y, z)
 ```
 
-The `SetPosition` function assigns a new position to the camera based on the specified `Vector3` value
-
 ## GetRotation
+
+The `GetRotation` function retrieves the current orientation of the camera, returning it as a `Matrix3`
 
 ```lua
 camera.GetRotation()
 ```
 
-The `GetRotation` function retrieves the current orientation of the camera, returning it as a `Matrix3`
-
 ## SetRotation
+
+The `SetRotation` function adjusts the camera's orientation based on the specified `Matrix3` values
 
 ```lua
 camera.SetRotation(Matrix3)
 ```
 
-The `SetRotation` function adjusts the camera's orientation based on the specified `Matrix3` values
-
 ## GetSubject
+
+The `GetSubject` function retrieves the instance that the camera is currently assigned to, allowing you to identify what object or entity the camera is focused on
 
 ```lua
 camera.GetSubject()
 ```
 
-The `GetSubject` function retrieves the instance that the camera is currently assigned to, allowing you to identify what object or entity the camera is focused on
-
 ## SetSubject
+
+The `SetSubject` function allows you to set the camera's focus to a specific instance. By passing the desired instance as a parameter, you can direct the camera's attention to that particular object or entity within the scene
 
 ```lua
 camera.SetSubject(Instance)
 ```
-
-The `SetSubject` function allows you to set the camera's focus to a specific instance. By passing the desired instance as a parameter, you can direct the camera's attention to that particular object or entity within the scene
