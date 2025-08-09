@@ -40,7 +40,7 @@
         "group": "Libraries",
         "icon": "library",
         "pages": [
-          "libraries/file",
+          "libraries/file"
         ]
       }
     ],
