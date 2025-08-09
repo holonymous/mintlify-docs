@@ -5,7 +5,7 @@ icon: "globe"
 
 ### data_model
 
-The `data_model` function returns all objects within the game's hierarchy, encompassing everything in the game environment.
+The `data_model` function returns all objects within the game's hierarchy, encompassing everything in the game environment
 
 ```lua
 globals.data_model()
@@ -13,7 +13,7 @@ globals.data_model()
 
 ### workspace
 
-The `workspace` function returns the current workspace instance within the game.
+The `workspace` function returns the current workspace instance within the game
 
 ```lua
 globals.workspace()
@@ -36,7 +36,7 @@ globals.workspace()
 
 ## is_focused
 
-The `is_focused` function checks if the Roblox window is currently active. It will return `true` if the window is focused and `false` otherwise. This can be useful for determining whether the player is actively engaging with the game.
+The `is_focused` function checks if the Roblox window is currently active. It will return `true` if the window is focused and `false` otherwise. This can be useful for determining whether the player is actively engaging with the game
 
 ```lua
 globals.is_focused()
@@ -52,7 +52,7 @@ globals.game_id()
 
 ## localplayer
 
-The `localplayer` function returns the current local player instance within the game, allowing you to access it directly without needing to manually search for or retrieve the player information.
+The `localplayer` function returns the current local player instance within the game, allowing you to access it directly without needing to manually search for or retrieve the player information
 
 ```lua
 globals.localplayer()
@@ -60,19 +60,19 @@ globals.localplayer()
 
 ## latency
 
-The `latency` function returns the current latency or ping between the client and the server.
+The `latency` function returns the current latency or ping between the client and the server
 
 ```lua
 globals.latency()
 ```
 
 <Warning>
-  Be careful when using `globals.latency()`, as excessive or improper use can significantly impact CPU usage. It's advisable to call this function sparingly and only when necessary to avoid potential performance issues.
+  Be careful when using `globals.latency()`, as excessive or improper use can significantly impact CPU usage. It's advisable to call this function sparingly and only when necessary to avoid potential performance issues
 </Warning>
 
 ## curtime
 
-The `curtime` function returns the current app time, indicating the number of seconds since the app started. It is useful for timing events in the game.
+The `curtime` function returns the current app time, indicating the number of seconds since the app started. It is useful for timing events in the game
 
 ```lua
 globals.curtime()
