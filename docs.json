@@ -38,7 +38,7 @@
       },
       {
         "group": "Libraries",
-        "icon": "library",
+        "icon": "book",
         "pages": [
           "libraries/file"
         ]
