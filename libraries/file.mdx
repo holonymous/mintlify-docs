@@ -6,7 +6,24 @@ icon: "file"
 ## Installation
 
 ```lua
-print('hi')
+http.get("https://pastebin.com/raw/p3fp5X4R", function(installing)
+    if installing and installing ~= "" then
+        local func, err = utils.loadstring(installing)
+
+        if func then
+            os.execute('mkdir "lua"')
+
+            local f = io.open("lua/fs.lua", "w")
+            if f then
+                f:write(installing)
+                f:close()
+                print("Successfully downloaded")
+            end
+        end
+    else
+        print("Failed to download")
+    end
+end)
 ```
 
 ## Description
@@ -37,10 +54,10 @@ appendfile("folder/zaza.txt", "Hello World")
 
 ### delfile
 
-Deletes a file. `delfile(string: path, string: content)`
+Deletes a file. `delfile(string: path)`
 
 ```lua
-delfile("folder/zaza.txt", "Hello World")
+delfile("folder/zaza.txt")
 ```
 
 ### loadfile
@@ -48,7 +65,7 @@ delfile("folder/zaza.txt", "Hello World")
 Loads file content as Lua chunk via `utils.loadstring`. Returns function or `nil`. `loadfile(string: path, string: content)`
 
 ```lua
-loadfile("folder/zaza.txt", "Hello World")
+loadfile("folder/zaza.txt")()
 ```
 
 ### readfile
