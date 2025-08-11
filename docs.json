@@ -18,6 +18,13 @@
             "help",
             "update"
           ]
+        },
+        {
+          "group": "Libraries",
+          "icon": "book",
+          "pages": [
+            "libraries/file"
+          ]
         }
       ],
       "global": {
