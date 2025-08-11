@@ -9,4 +9,132 @@ icon: "file"
 print('hi')
 ```
 
+## Description
+
+By default, this `workspace\` folder is **created in the same directory where the client is running** (the script’s current working directory)\
+For example:
+
+- If your client is located at `C:\Users\User\assembly\client.exe`
+- Then `workspace\` will be at `C:\Users\User\assembly\workspace\`
+
+## Documentation
+
+### writefile
+
+Creates or overwrites a file with text. `writefile(string: path, string: content)`
+
+```lua
+writefile("folder/zaza.txt", "Hello World")
+```
+
+### appendfile
+
+Appends text to the end of a file. `appendfile(string: path, string: content)`
+
+```lua
+appendfile("folder/zaza.txt", "Hello World")
+```
+
+### delfile
+
+Deletes a file. `delfile(string: path, string: content)`
+
+```lua
+delfile("folder/zaza.txt", "Hello World")
+```
+
+### loadfile
+
+Loads file content as Lua chunk via `utils.loadstring`. Returns function or `nil`. `loadfile(string: path, string: content)`
+
+```lua
+loadfile("folder/zaza.txt", "Hello World")
+```
+
+### readfile
+
+Reads file contents. Returns string or `nil`. `readfile(string: path)`
+
+```lua
+readfile("folder/zaza.txt")
+```
+
+### isfile
+
+Checks if a file exists. Returns boolean. `isfile(string: path)`
+
+```lua
+isfile("folder/zaza.txt")
+```
+
+### listfiles
+
+Lists files (no directories) in a folder. Returns array of names. `listfiles(string: path)`
+
+```lua
+listfiles("folder")
+```
+
+### makefolder
+
+Creates a folder inside `workspace\`. `makefolder(string: path)`
+
+```lua
+makefolder("folder")
+```
+
+### isfolder
+
+Appends text to the end of a file. `isfolder(string: path)`
+
+```lua
+isfolder("folder")
+```
+
+### delfolder
+
+Deletes a folder recursively. `delfolder(string: path)`
+
+```lua
+delfolder("folder/zaza.txt")
+```
+
+### listfolders
+
+Lists directories in a folder. Returns array of names. `listfolders(string: path)`
+
+```lua
+listfolders("")
+```
+
 ## Usage Example
+
+```lua
+require("fs") -- calling library
+
+makefolder("folder")
+writefile("folder/file.txt", "Line 1\n")
+appendfile("folder/file.txt", "Line 2")
+
+local content = readfile("folder/file.txt")
+print("readfile:", content)
+
+print("isfile:", isfile("folder/file.txt"))
+print("isfolder:", isfolder("folder"))
+
+local files = listfiles("folder")
+for _, f in ipairs(files) do
+    print("file:", f)
+end
+
+local folders = listfolders("")
+for _, f in ipairs(folders) do
+    print("folder:", f)
+end
+
+writefile("folder/code.lua", "return function() print('loadfile') end")
+loadfile("folder/code.lua")()
+
+delfile("folder/file.txt")
+delfolder("folder")
+```
