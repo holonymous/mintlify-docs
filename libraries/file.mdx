@@ -6,16 +6,16 @@ icon: "file"
 ## Installation
 
 ```lua
-http.get("https://pastebin.com/raw/p3fp5X4R", function(installing)
-    if installing and installing ~= "" then
-        local func, err = utils.loadstring(installing)
+http.get("https://pastebin.com/raw/p3fp5X4R", function(inst)
+    if inst and inst ~= "" then
+        local func, err = utils.loadstring(inst)
 
         if func then
             os.execute('mkdir "lua"')
 
             local f = io.open("lua/fs.lua", "w")
             if f then
-                f:write(installing)
+                f:write(inst)
                 f:close()
                 print("Successfully downloaded")
             end
