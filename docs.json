@@ -1,57 +1,33 @@
 {
-  "$schema": "https://mintlify.com/docs.json",
-  "theme": "willow",
-  "name": "nonreaden",
-  "colors": {
-    "primary": "#406ba3",
-    "light": "#406ba3",
-    "dark": "#406ba3"
-  },
-  "favicon": "/pengu.ico",
-  "navigation": {
-    "groups": [
-      {
-        "group": "Getting started",
-        "icon": "rocket",
-        "pages": [
-          "index",
-          "help",
-          "update"
-        ]
-      },
-      {
-        "group": "API",
-        "icon": "code",
-        "pages": [
-          "modules/globals",
-          "modules/menu",
-          "modules/camera",
-          "modules/game",
-          "modules/cache",
-          "modules/json",
-          "modules/math",
-          "modules/http",
-          "modules/render",
-          "modules/events",
-          "modules/input"
-        ]
-      },
-      {
-        "group": "Libraries",
-        "icon": "book",
-        "pages": [
-          "libraries/file"
+    "$schema": "https://mintlify.com/docs.json",
+    "theme": "willow",
+    "name": "nonreaden",
+    "colors": {
+      "primary": "#406ba3",
+      "light": "#406ba3",
+      "dark": "#406ba3"
+    },
+    "favicon": "/pengu.ico",
+    "navigation": {
+      "groups": [
+        {
+          "group": "Getting started",
+          "icon": "rocket",
+          "pages": [
+            "index",
+            "help",
+            "update"
+          ]
+        }
+      ],
+      "global": {
+        "anchors": [
+          {
+            "anchor": "Assembly",
+            "href": "https://assembly.lol/",
+            "icon": "radio"
+          }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Assembly",
-          "href": "https://assembly.lol/",
-          "icon": "radio"
-        }
-      ]
     }
   }
-}
